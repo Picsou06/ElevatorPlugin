@@ -1,5 +1,6 @@
 package fr.picsou.elevator;
 
+import fr.picsou.elevator.components.listener.ListenerManager;
 import fr.picsou.elevator.utils.Commands.SimpleCommand;
 import org.bukkit.craftbukkit.v1_20_R2.CraftServer;
 import org.bukkit.entity.Player;
@@ -14,6 +15,7 @@ public class Main extends JavaPlugin {
         saveDefaultConfig();
         instance = this;
         System.out.println("[Elevator] ON");
+        new ListenerManager(this);
     }
 
     @Override
