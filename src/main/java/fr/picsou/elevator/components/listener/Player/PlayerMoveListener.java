@@ -29,7 +29,7 @@ public class PlayerMoveListener implements Listener {
         for (int i = 1; i <= Main.getInstance().getConfig().getInt("HauteurMax"); i++) {
             Location currentLocation = new Location(blockLocationUnderPlayer.getWorld(), blockLocationUnderPlayer.getX(), blockLocationUnderPlayer.getY() + i, blockLocationUnderPlayer.getZ());
 
-            if (currentLocation.getBlock().getType() == Material.OBSIDIAN) {
+            if (currentLocation.getBlock().getType() == Material.(Main.getInstance().getConfig().getString("bloc"))) {
                 Location teleportLocation = new Location(currentLocation.getWorld(), currentLocation.getX(), currentLocation.getY() + 1, currentLocation.getZ(), player.getLocation().getYaw(), player.getLocation().getPitch());
                 player.teleport(teleportLocation);
                 break;
