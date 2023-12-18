@@ -20,7 +20,7 @@ public class PlayerMoveListener implements Listener {
         Location blockLocationUnderPlayer = new Location(from.getWorld(), from.getX(), from.getY() - 1, from.getZ(), 0, 0);
 
         // Vérifiez si le joueur monte et n'est ni en train de nager ni de voler
-        if (from.getBlockY() < to.getBlockY() && !player.isSwimming() && !player.isFlying() && from.getWorld().getBlockAt(blockLocationUnderPlayer).getType() == Material.OBSIDIAN) {
+        if (from.getBlockY() < to.getBlockY() && !player.isSwimming() && !player.isFlying() && from.getWorld().getBlockAt(blockLocationUnderPlayer).getType() == Material.(Main.getInstance().getConfig().getString("bloc"))) {
             teleportPlayerToObsidianAbove(player, blockLocationUnderPlayer);
         }
     }
